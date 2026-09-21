@@ -1,23 +1,85 @@
 {
   "summary": "The AI project cycle is a six-stage framework for developing AI solutions. The stages are problem scoping, data acquisition, data exploration, modeling, evaluation, and deployment. Problem scoping defines the problem using the four Ws: Who, What, Where, and Why. Data acquisition involves collecting relevant data. Data exploration uses visualization to discover patterns. Modeling uses machine learning techniques such as supervised and unsupervised learning. Evaluation measures how well the model performs. Deployment puts the completed AI solution into the real world.",
   "questions": [
-    "What are the six stages of the AI project cycle?",
-    "Why is problem scoping important?",
-    "What are the four Ws used during problem scoping?",
-    "What happens during data acquisition?",
-    "What is the purpose of data exploration?",
-    "What is the difference between supervised and unsupervised learning?",
-    "Why is a model evaluated?",
-    "What happens during deployment?"
-  ],
-  "answers": [
-    "The six stages are problem scoping, data acquisition, data exploration, modeling, evaluation, and deployment.",
-    "Problem scoping is important because it clearly defines the problem and what the AI project is trying to accomplish.",
-    "The four Ws are Who, What, Where, and Why.",
-    "Data acquisition involves collecting the data needed for the AI project.",
-    "Data exploration helps people understand the data and identify patterns using techniques such as visualization.",
-    "Supervised learning uses labeled data, while unsupervised learning uses unlabeled data to find patterns.",
-    "A model is evaluated to determine how accurately and effectively it performs its intended task.",
-    "Deployment puts the completed AI solution into the real world so people can use it."
+    {
+      "question": "What is the first stage of the AI project cycle?",
+      "options": [
+        "Modeling",
+        "Problem Scoping",
+        "Evaluation",
+        "Deployment"
+      ],
+      "correctAnswer": "Problem Scoping"
+    },
+    {
+      "question": "Which of these is one of the four Ws used in problem scoping?",
+      "options": [
+        "When",
+        "Which",
+        "Who",
+        "How"
+      ],
+      "correctAnswer": "Who"
+    },
+    {
+      "question": "What is the main purpose of data acquisition?",
+      "options": [
+        "To deploy the AI model",
+        "To collect relevant data",
+        "To evaluate the model",
+        "To create a website"
+      ],
+      "correctAnswer": "To collect relevant data"
+    },
+    {
+      "question": "What does data exploration help people identify?",
+      "options": [
+        "Patterns in the data",
+        "Website passwords",
+        "The final deployment platform",
+        "The AI project's budget"
+      ],
+      "correctAnswer": "Patterns in the data"
+    },
+    {
+      "question": "Which type of learning uses labeled data?",
+      "options": [
+        "Unsupervised learning",
+        "Supervised learning",
+        "Random learning",
+        "Manual learning"
+      ],
+      "correctAnswer": "Supervised learning"
+    },
+    {
+      "question": "What is the purpose of evaluation?",
+      "options": [
+        "To collect the original data",
+        "To define the four Ws",
+        "To measure how well the model performs",
+        "To create the problem statement"
+      ],
+      "correctAnswer": "To measure how well the model performs"
+    },
+    {
+      "question": "Which stage puts the AI solution into the real world?",
+      "options": [
+        "Data exploration",
+        "Modeling",
+        "Deployment",
+        "Problem scoping"
+      ],
+      "correctAnswer": "Deployment"
+    },
+    {
+      "question": "Which of these is one of the six stages of the AI project cycle?",
+      "options": [
+        "Programming",
+        "Evaluation",
+        "Advertising",
+        "Marketing"
+      ],
+      "correctAnswer": "Evaluation"
+    }
   ]
 }
