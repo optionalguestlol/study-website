@@ -1,4 +1,4 @@
-   async function loadStudyMaterial() {
+  async function loadStudyMaterial() {
     try {
         const response = await fetch("current.json");
 
@@ -8,12 +8,14 @@
 
         const data = await response.json();
 
+        // Display lesson as separate paragraphs
         const lessonElement = document.getElementById("lesson");
 
-lessonElement.innerHTML = data.lesson
-    .split(/\n\s*\n/)
-    .map(paragraph => `<p>${paragraph.trim()}</p>`)
-    .join("");
+        lessonElement.innerHTML = data.lesson
+            .split(/\r?\n+/)
+            .filter(paragraph => paragraph.trim() !== "")
+            .map(paragraph => `<p>${paragraph.trim()}</p>`)
+            .join("");
 
         const questionsContainer = document.getElementById("questions");
         questionsContainer.innerHTML = "";
@@ -49,7 +51,6 @@ lessonElement.innerHTML = data.lesson
 
                 button.addEventListener("click", () => {
 
-                    // Don't allow interaction after the question is completed
                     if (answeredCorrectly.has(index)) {
                         return;
                     }
@@ -88,8 +89,7 @@ lessonElement.innerHTML = data.lesson
                         feedback.className =
                             "feedback wrong-text";
 
-                        // Only disable the button that was chosen.
-                        // The student can try another answer.
+                        // Disable only the wrong option
                         button.disabled = true;
                     }
                 });
