@@ -151,7 +151,13 @@ main {
     cursor: default;
     opacity: 0.8;
 }
+
+}
 #lesson p {
-    margin-bottom: 18px;
+    margin: 0 0 20px 0;
     line-height: 1.7;
+}
+
+#lesson p:last-child {
+    margin-bottom: 0;
 }
