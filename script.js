@@ -8,7 +8,7 @@
 
         const data = await response.json();
 
-        document.getElementById("summary").textContent = data.summary;
+        document.getElementById("lesson").textContent = data.lesson;
 
         const questionsContainer = document.getElementById("questions");
         questionsContainer.innerHTML = "";
@@ -111,7 +111,7 @@
     } catch (error) {
         console.error(error);
 
-        document.getElementById("summary").textContent =
+        document.getElementById("lesson").textContent =
             "Study material could not be loaded.";
     }
 }
