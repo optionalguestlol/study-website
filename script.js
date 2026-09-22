@@ -8,7 +8,12 @@
 
         const data = await response.json();
 
-        document.getElementById("lesson").textContent = data.lesson;
+        const lessonElement = document.getElementById("lesson");
+
+lessonElement.innerHTML = data.lesson
+    .split(/\n\s*\n/)
+    .map(paragraph => `<p>${paragraph.trim()}</p>`)
+    .join("");
 
         const questionsContainer = document.getElementById("questions");
         questionsContainer.innerHTML = "";
