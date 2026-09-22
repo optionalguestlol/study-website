@@ -162,3 +162,9 @@ main {
 #lesson p:last-child {
     margin-bottom: 0;
 }
+#lesson p {
+    display: block;
+    margin: 0 0 24px 0 !important;
+    padding: 0;
+    line-height: 1.8;
+}
