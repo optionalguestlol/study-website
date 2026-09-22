@@ -1,96 +1,296 @@
 * {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
     background: #f4f7fb;
     color: #1f2937;
-    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
 }
 
-header {
-    background: #4f46e5;
+
+/* =========================
+   HEADER
+========================= */
+
+.hero {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
     color: white;
-    text-align: center;
-    padding: 40px 20px;
+    padding: 35px 20px;
+    box-shadow: 0 4px 20px rgba(79, 70, 229, 0.25);
 }
 
-header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 8px;
+.hero-content {
+    max-width: 950px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 18px;
 }
 
-header p {
+.logo {
+    font-size: 48px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 34px;
+}
+
+.hero p {
+    margin: 6px 0 0;
     opacity: 0.9;
+    font-size: 16px;
 }
+
+.theme-button {
+    margin-left: auto;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    color: white;
+    font-size: 21px;
+    cursor: pointer;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.theme-button:hover {
+    transform: rotate(15deg) scale(1.08);
+    background: rgba(255, 255, 255, 0.28);
+}
+
+
+/* =========================
+   MAIN
+========================= */
 
 main {
-    max-width: 900px;
-    margin: 40px auto;
+    max-width: 950px;
+    margin: 35px auto;
     padding: 0 20px;
 }
 
-.card {
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress-card {
     background: white;
-    border-radius: 16px;
-    padding: 30px;
+    border-radius: 18px;
+    padding: 24px;
     margin-bottom: 25px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
 }
 
-.card h2 {
-    margin-bottom: 20px;
-    color: #4f46e5;
+.progress-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.small-label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #6b7280;
+    margin-bottom: 5px;
+}
+
+.progress-top h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.progress-icon {
+    font-size: 34px;
+}
+
+.progress-bar {
+    height: 12px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 18px;
+}
+
+#progressFill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #4f46e5, #8b5cf6);
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.06);
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+.section-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: #eef2ff;
+    font-size: 25px;
+}
+
+.section-heading h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+
+/* =========================
+   LESSON
+========================= */
+
+#lesson {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+#lesson p {
+    margin: 0 0 24px 0;
+    line-height: 1.8;
+}
+
+#lesson p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-intro {
+    color: #6b7280;
+    margin-top: -10px;
+    margin-bottom: 25px;
 }
 
 .question-box {
-    background: #f8fafc;
-    border-radius: 12px;
-    padding: 20px;
-    margin-bottom: 20px;
+    border: 2px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 22px;
+    margin-bottom: 18px;
+    transition: border-color 0.2s, transform 0.2s;
+}
+
+.question-box:hover {
+    border-color: #c7d2fe;
+    transform: translateY(-2px);
 }
 
 .question-box h3 {
-    margin-bottom: 15px;
+    margin-top: 0;
+    line-height: 1.5;
 }
+
+
+/* =========================
+   OPTIONS
+========================= */
 
 .option {
     display: block;
     width: 100%;
-    padding: 14px;
-    margin: 8px 0;
+    padding: 15px;
+    margin: 9px 0;
     border: 2px solid #d1d5db;
-    border-radius: 10px;
+    border-radius: 11px;
     background: white;
     text-align: left;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.2s;
 }
 
 .option:hover:not(:disabled) {
-    border-color: #4f46e5;
-    background: #eef2ff;
-}
-
-.option:disabled {
-    cursor: default;
+    border-color: #6366f1;
+    background: #f5f3ff;
+    transform: translateX(4px);
 }
 
 .option.correct {
     background: #dcfce7;
     border-color: #22c55e;
     color: #166534;
+    animation: correctPop 0.3s ease;
 }
 
 .option.wrong {
     background: #fee2e2;
     border-color: #ef4444;
     color: #991b1b;
+    animation: shake 0.3s ease;
 }
+
+.option:disabled {
+    cursor: default;
+    opacity: 0.85;
+}
+
+@keyframes correctPop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-5px);
+    }
+
+    75% {
+        transform: translateX(5px);
+    }
+}
+
+
+/* =========================
+   FEEDBACK
+========================= */
 
 .feedback {
     margin-top: 12px;
@@ -105,19 +305,11 @@ main {
     color: #dc2626;
 }
 
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.8rem;
-    }
 
-    .card {
-        padding: 20px;
-    }
+/* =========================
+   SCORE
+========================= */
 
-    .option {
-        padding: 12px;
-    }
-}
 .score {
     background: #eef2ff;
     color: #4f46e5;
@@ -128,6 +320,49 @@ main {
     border-radius: 12px;
     margin-bottom: 25px;
 }
+
+
+/* =========================
+   COMPLETION
+========================= */
+
+.completion-card {
+    background: linear-gradient(135deg, #eef2ff, #f5f3ff);
+    border-radius: 20px;
+    padding: 40px 25px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.completion-icon {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+.completion-card h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.completion-card p {
+    color: #6b7280;
+}
+
+.final-score {
+    font-size: 42px;
+    font-weight: bold;
+    color: #4f46e5;
+    margin: 20px 0;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
 
 .reset-button {
     display: block;
@@ -140,31 +375,139 @@ main {
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.2s;
+    transition: all 0.2s;
 }
 
 .reset-button:hover {
     background: #4338ca;
+    transform: translateY(-2px);
 }
 
-.option:disabled {
-    cursor: default;
-    opacity: 0.8;
-}
-
-}
-#lesson p {
-    margin-top: 0;
-    margin-bottom: 24px;
-    line-height: 1.8;
-}
-
-#lesson p:last-child {
-    margin-bottom: 0;
-}
-#lesson p {
+.top-button {
     display: block;
-    margin: 0 0 24px 0 !important;
-    padding: 0;
-    line-height: 1.8;
+    margin: 30px auto;
+    padding: 12px 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 10px;
+    background: white;
+    color: #374151;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.top-button:hover {
+    border-color: #6366f1;
+    color: #4f46e5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #6b7280;
+}
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark {
+    background: #111827;
+    color: #f9fafb;
+}
+
+body.dark .card,
+body.dark .progress-card {
+    background: #1f2937;
+    box-shadow: none;
+}
+
+body.dark .question-box {
+    border-color: #374151;
+}
+
+body.dark .question-box:hover {
+    border-color: #6366f1;
+}
+
+body.dark .option,
+body.dark .top-button {
+    background: #111827;
+    color: #f9fafb;
+    border-color: #4b5563;
+}
+
+body.dark .option:hover:not(:disabled) {
+    background: #312e81;
+}
+
+body.dark .quiz-intro,
+body.dark .completion-card p,
+body.dark footer {
+    color: #9ca3af;
+}
+
+body.dark .progress-bar {
+    background: #374151;
+}
+
+body.dark .completion-card {
+    background: #1e1b4b;
+}
+
+body.dark .small-label {
+    color: #9ca3af;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .hero {
+        padding: 25px 15px;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .logo {
+        font-size: 38px;
+    }
+
+    main {
+        margin-top: 20px;
+        padding: 0 12px;
+    }
+
+    .card,
+    .progress-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .section-heading h2 {
+        font-size: 22px;
+    }
+
+    #lesson {
+        font-size: 16px;
+    }
+
+    .question-box {
+        padding: 17px;
+    }
+
+    .option {
+        padding: 14px;
+    }
 }
