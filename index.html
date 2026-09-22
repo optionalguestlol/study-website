@@ -3,35 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Guide</title>
+
+    <title>Study Hub</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>📚 Study Guide</h1>
-        <p>Learn, practice, and test yourself.</p>
+    <header class="hero">
+        <div class="hero-content">
+            <div class="logo">📚</div>
+
+            <div>
+                <h1>Study Hub</h1>
+                <p>Learn it. Practice it. Master it.</p>
+            </div>
+
+            <button id="themeButton" class="theme-button" type="button">
+                🌙
+            </button>
+        </div>
     </header>
+
 
     <main>
 
-        <section class="card">
-            <h2>📖 Lesson</h2>
-            <div id="lesson">Loading...</div>
+        <!-- Study Progress -->
+        <section class="progress-card">
+
+            <div class="progress-top">
+                <div>
+                    <span class="small-label">YOUR PROGRESS</span>
+                    <h2 id="progressText">0 / 8 completed</h2>
+                </div>
+
+                <div class="progress-icon">
+                    🎯
+                </div>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progressFill"></div>
+            </div>
+
         </section>
 
-        <section class="card">
-            <h2>❓ Practice Questions</h2>
-            <div id="questions">Loading...</div>
+
+        <!-- Lesson -->
+        <section class="card lesson-card">
+
+            <div class="section-heading">
+                <div class="section-icon">📖</div>
+
+                <div>
+                    <span class="small-label">LEARN</span>
+                    <h2>Lesson</h2>
+                </div>
+            </div>
+
+            <div id="lesson">
+                Loading lesson...
+            </div>
+
         </section>
 
-        <section class="card">
-            <h2>✅ Answers</h2>
-            <div id="answers">Loading...</div>
+
+        <!-- Practice -->
+        <section class="card quiz-card">
+
+            <div class="section-heading">
+                <div class="section-icon">🧠</div>
+
+                <div>
+                    <span class="small-label">PRACTICE</span>
+                    <h2>Test Yourself</h2>
+                </div>
+            </div>
+
+            <p class="quiz-intro">
+                Choose an answer for each question. If you get one wrong,
+                you can try another option.
+            </p>
+
+            <div id="questions">
+                Loading questions...
+            </div>
+
         </section>
+
+
+        <!-- Completion -->
+        <section id="completionCard" class="completion-card hidden">
+
+            <div class="completion-icon">
+                🎉
+            </div>
+
+            <h2>Quiz Complete!</h2>
+
+            <p id="completionMessage">
+                Great work!
+            </p>
+
+            <div id="finalScore" class="final-score">
+                0 / 8
+            </div>
+
+            <button id="completionReset" class="reset-button" type="button">
+                ↻ Try Again
+            </button>
+
+        </section>
+
+
+        <button id="topButton" class="top-button" type="button">
+            ↑ Back to top
+        </button>
 
     </main>
+
+
+    <footer>
+        <p>Keep learning. Keep improving. 🚀</p>
+    </footer>
+
 
     <script src="script.js"></script>
 
